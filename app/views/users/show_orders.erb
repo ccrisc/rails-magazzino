@@ -1,0 +1,18 @@
+<div class="container">
+
+<h1>Gli ordini di <%= "#{@user.name} #{@user.surname}" %></h1>
+
+<% if @orders.any? %>
+  <ul>
+    <% @orders.each do |order| %>
+      <li><%= link_to "Ordine ##{order.id} del #{order.created_at.strftime('%d-%m-%Y')}", order_path(order) %></li>
+
+  <% end %>
+  </ul>
+<% else %>
+  <p>Questo cliente non ha effettuato nessun ordine.</p>
+<% end %>
+
+<%= link_to 'Indietro', users_path, class: "btn btn-light" %>
+
+</div>

@@ -1,0 +1,33 @@
+<!-- app/views/orders/new.html.erb -->
+<div class="container">
+  <div class="d-flex">
+    <h2>Crea nuovo Articolo</h2>
+  </div>
+
+  <%= form_with(model: @item, local: true) do |form| %>
+    <!-- User form fields -->
+    <div>
+      <%= form.label :name %>
+      <br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :Descrizione %>
+      <br>
+      <%= form.text_field :description %>
+    </div>
+
+    <div>
+      <%= form.label :Stock %>
+      <br>
+      <%= form.number_field :stock %>
+    </div>
+
+    <br>
+    <div class="inline">
+      <td><%= link_to 'Annulla', items_path, class: "btn btn-light" %></td>
+      <td><%= form.submit 'Conferma', class: 'btn btn-primary'%></td>
+    </div>
+  <% end %>
+</div>

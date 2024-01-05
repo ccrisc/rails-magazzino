@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4 col-12">
+      <div class="card border-dark  mb-3" style="max-width: 18rem;">
+        <div class="card-body text-dark ">
+          <div class="row">
+            <div class="col-4">
+              <%= image_tag("users.png", alt: "equipment", class: "img-fluid") %>
+            </div>
+            <div class="col-8">
+              <h5 class="card-title"><strong>TOTALE CLIENTI</strong></h5>
+              <h4 class="card-text"><%= @user_count %></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="card border-dark  mb-3" style="max-width: 18rem;">
+        <div class="card-body text-dark ">
+          <div class="row">
+            <div class="col-4">
+              <%= image_tag("items.png", alt: "equipment", class: "img-fluid") %>
+            </div>
+            <div class="col-8">
+              <h5 class="card-title"><strong>TOTALE ARTICOLI</strong></h5>
+              <h4 class="card-text"><%= @item_count %></h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="card border-dark  mb-3" style="max-width: 18rem;">
+        <div class="card-body text-dark ">
+          <div class="row">
+            <div class="col-4">
+              <%= image_tag("orders.png", alt: "equipment", class: "img-fluid") %>
+            </div>
+            <div class="col-8">
+              <h5 class="card-title"><strong>ORDINI ATTIVI</strong></h5>
+              <h4 class="card-text"><%= @order_count %></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

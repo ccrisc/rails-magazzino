@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Nuovo Ordine</h1>
+
+  <%= form_with(model: @order, local: true) do |form| %>
+    <div class="field">
+      <%= form.collection_select :user_id, User.all, :id, :full_name, { prompt: 'Seleziona cliente' }, class: 'form-control' %>
+    </div>
+    <br>
+
+    <div id="order_items">
+      <%= form.fields_for :order_items do |order_item_form| %>
+        <%= render 'order_item_fields', f: order_item_form %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Aggiungi articolo', form, :order_items, class: 'btn btn-outline-warning' %>
+      </div>
+      <br>
+    </div>
+
+    <div class="field">
+      <%= link_to 'Indietro', orders_path, class: 'btn btn-light' %>
+      <%= form.submit 'Salva', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

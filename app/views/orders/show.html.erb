@@ -1,0 +1,30 @@
+<div class="container">
+<h1>Ordine <%= @order.id %></h1>
+
+<p><strong>Cliente:</strong> <%= "#{@order.user.name} #{@order.user.surname}" %></p>
+  <p><strong>Data ordine:</strong> <%= "#{@order.created_at.strftime('%d-%m-%Y %H:%M')}" %></p>
+
+<br>
+  <table class="table" >
+    <thead class="thead-dark">
+    <!-- Table headers -->
+    <tr>
+      <th> Articolo </th>
+      <th> Quantita </th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows -->
+    <% @order.order_items.each do |order_item|%>
+      <tr>
+        <td><%= order_item.item.name %></td>
+        <td><%= order_item.quantity %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'Indietro', orders_path, class: "btn btn-light" %>
+  <%= link_to 'Modifica', edit_order_path, class: "btn btn-dark" %>
+
+</div>

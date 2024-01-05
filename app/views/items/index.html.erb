@@ -1,0 +1,62 @@
+<div class="container">
+  <h1>ARTICOLI</h1>
+  <br>
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+  <div class="d-flex">
+    <%= link_to 'Nuovo Articolo', new_item_path, class:"btn btn-warning" %>
+    &nbsp; &nbsp;<!--
+    <%= link_to 'Carico Stock', new_stock_items_path, class:"btn btn-success" %> -->
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <%= form_tag items_path, method: :get, class: "form-inline" do %>
+      <div class="form-group mx-sm-3 mb-2">
+        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Cerca articolo" %>
+      </div>
+      <%= submit_tag "Cerca", class: "btn btn-primary mb-2" %>
+    <% end %>
+  </div>
+
+
+  </br>
+  <div class="row">
+    <div class="col-12">
+      <table class="table" >
+        <thead class="thead-dark">
+        <!-- Table headers -->
+        <tr>
+          <th><%= link_to "Articolo", :sort => "name"%> </th>
+          <th><%= link_to "Descrizione", :sort => "description"%> </th>
+          <th>Stock</th>
+          <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Table rows -->
+        <% @items.each do |item| %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.description %></td>
+            <td><%= link_to item.stock, orders_by_item_item_path(item) %></td>
+            <td><%= link_to 'Modifica', edit_item_path(item), class: "btn btn-dark" %></td>
+            <td><%= button_to 'Elimina', item_path(item), method: :delete, class: "btn btn-danger" %></td>
+            <!-- <td><%= link_to 'Elimina', item, method: :delete, data: { confirm: 'Sei sicuro?'} %></td> -->
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center">
+        <%= will_paginate @items %>
+      </div>
+      <br>
+      <div class="text-center">
+        <%= page_entries_info @items %>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+

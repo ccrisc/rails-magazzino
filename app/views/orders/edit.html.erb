@@ -1,0 +1,26 @@
+<!-- orders/edit.html.erb -->
+
+<div class="container">
+  <h1>Modifica Ordine <%=@order.id %></h1>
+  <p><strong>Cliente:</strong> <%= "#{@order.user.name} #{@order.user.surname}" %></p>
+  <p><strong>Data ordine:</strong> <%= "#{@order.created_at.strftime('%d-%m-%Y %H:%M')}" %></p>
+
+  <%= form_with(model: @order, local: true) do |form| %>
+
+    <div id="order_items">
+      <%= form.fields_for :order_items do |order_item_form| %>
+        <%= render 'order_item_fields', f: order_item_form %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Aggiungi articolo', form, :order_items, class: 'btn btn-outline-warning' %>
+      </div>
+    </div>
+<br>
+    <div class="field">
+      <%= link_to 'Indietro', orders_path, class: 'btn btn-light' %>
+      <%= form.submit 'Salva', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+
+</div>

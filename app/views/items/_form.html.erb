@@ -1,0 +1,13 @@
+
+<%= form_with(model: order, local: true) do |form| %>
+  <!-- Order form fields -->
+  <%= form.fields_for :order_items do |order_item_form| %>
+    <%= render 'order_item_fields', f: order_item_form %>
+  <% end %>
+  <div>
+    <%= link_to_add_association 'Aggiungi articolo', form, :order_items %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

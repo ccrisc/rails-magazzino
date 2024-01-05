@@ -1,0 +1,9 @@
+body,html {
+    height: 100%;
+    background-color: white;
+  }
+
+.mybtn {
+  background-color:#22bcff;
+  color:#fff
+}

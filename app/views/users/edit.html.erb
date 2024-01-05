@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="d-flex">
+    <h2>Modifica Anagrafica</h2>
+  </div>
+
+  <%= form_with model: @user, id: dom_id(@user, "form"), class: "table min-w-full", method: :patch do |form| %>
+    <div>
+      <%= form.label :Nome %>
+      <br>
+      <%= form.text_field :name %>
+      <%= @user.errors[:name].first if @user.errors[:name].any? %>
+    </div>
+
+    <div>
+      <%= form.label :Cognome %>
+      <br>
+      <%= form.text_field :surname %>
+      <%= @user.errors[:surname].first if @user.errors[:surname].any? %>
+    </div>
+
+    <div>
+      <%= form.label :Email %>
+      <br>
+      <%= form.text_field :email %>
+      <%= @user.errors[:email].first if @user.errors[:email].any? %>
+    </div>
+    <br>
+
+    <div class="inline">
+      <td><%= link_to 'Annulla', users_path, class: "btn btn-light" %></td>
+      <td><%= form.submit 'Conferma', class: 'btn btn-primary' %></td>
+    </div>
+  <% end %>
+</div>

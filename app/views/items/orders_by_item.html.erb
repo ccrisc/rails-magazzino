@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Dettaglio ordini</h1>
+  <p><strong>Articolo:</strong> <%= @item.name %></p>
+
+  <% if @orders.present? %>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID ordine</th>
+        <th>Data</th>
+        <th>Cliente</th>
+        <th>Quantita</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @orders.each do |order| %>
+        <% order.order_items.each do |order_item| %>
+          <% if order_item.item == @item %>
+            <tr>
+              <td><%= order.id %></td>
+              <td><%= order.created_at.strftime('%d-%m-%Y') %></td>
+              <td><%= order.user.full_name %></td>
+              <td><%= order_item.quantity %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Nessun ordine <%= @item.name %>.</p>
+  <% end %>
+
+  <%= link_to 'Indietro', items_path, class: 'btn btn-light' %>
+</div>
+<br>
