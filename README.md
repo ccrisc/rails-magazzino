@@ -15,7 +15,7 @@ This is my first Rails app. It is a simple orders stock management system develo
 2. Run `bundle install`
 3. Run `rails g rails_magazzino:install`
 4. Provide a namespace for the routes when asked
-5. Start a server `rails s` and administer your data at [/admin](http://localhost:3000/admin). (if you chose default namespace: /admin)
+5. Start a server `rails s` and administer your data at [localhost](http://localhost:3000/).
 
 ## Upgrading from 2.x
 
