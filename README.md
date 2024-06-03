@@ -1,9 +1,9 @@
 # RailsAdmin
 
-[![Gem Version](https://img.shields.io/gem/v/rails_admin.svg)][gem]
-[![Code Climate](https://codeclimate.com/github/railsadminteam/rails_admin.svg)][codeclimate]
+[![Gem Version](https://img.shields.io/gem/v/rails_magazzino.svg)][gem]
+[![Code Climate](https://codeclimate.com/github/ccrisc/rails_magazzino.svg)][codeclimate]
 [gem]: https://rubygems.org/gems/rails_magazzino
-[codeclimate]: https://codeclimate.com/github/rails_magazzino/rails_admin
+[codeclimate]: https://codeclimate.com/github/rails_magazzino/rails_magazzino
 [semver]: https://dependabot.com/compatibility-score.html?dependency-name=rails_magazzino&package-manager=bundler&version-scheme=semver
 
 This is my first Rails app. It is a simple orders stock management system.
@@ -27,7 +27,7 @@ This is my first Rails app. It is a simple orders stock management system.
 ## Upgrading from 2.x
 
 Due to introduction of Webpack/Webpacker support, some additional dependency and configuration will be needed.
-Running `rails g rails_admin:install` will suggest you some required changes, based on current setup of your app.
+Running `rails g rails_magazzino:install` will suggest you some required changes, based on current setup of your app.
 
 ## Configuration
 
@@ -37,7 +37,7 @@ In `config/initializers/rails_magazzino.rb`:
 
 ## Support
 
-If you think you found a bug in RailsAdmin, you can [submit an issue](https://github.com/ccrisc/rails_magazzino/issues/new).
+If you think you found a bug in rails_magazzino, you can [submit an issue](https://github.com/ccrisc/rails_magazzino/issues/new).
 
 ## Supported Ruby Versions
 
