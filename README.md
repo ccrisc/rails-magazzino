@@ -1,6 +1,6 @@
 # rails_magazzino
 
-This is my first Rails app. It is a simple orders stock management system.
+This is my first Rails app. It is a simple orders stock management system developed in Rails 7 with Importmap.
 
 ## Features
 
@@ -12,7 +12,6 @@ This is my first Rails app. It is a simple orders stock management system.
 
 ## Installation
 
-1. On your gemfile: `gem 'rails_admin', '~> 3.0'`
 2. Run `bundle install`
 3. Run `rails g rails_magazzino:install`
 4. Provide a namespace for the routes when asked
