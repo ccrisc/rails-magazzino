@@ -1,10 +1,4 @@
-# RailsAdmin
-
-[![Gem Version](https://img.shields.io/gem/v/rails_magazzino.svg)][gem]
-[![Code Climate](https://codeclimate.com/github/ccrisc/rails_magazzino.svg)][codeclimate]
-[gem]: https://rubygems.org/gems/rails_magazzino
-[codeclimate]: https://codeclimate.com/github/rails_magazzino/rails_magazzino
-[semver]: https://dependabot.com/compatibility-score.html?dependency-name=rails_magazzino&package-manager=bundler&version-scheme=semver
+# rails_magazzino
 
 This is my first Rails app. It is a simple orders stock management system.
 
