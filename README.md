@@ -14,8 +14,7 @@ This is my first Rails app. It is a simple orders stock management system.
 - Custom actions
 - Automatic form validation
 - Filtering and ordering
-- Supported ORMs
-  - ActiveRecord
+- Supported ORMs: ActiveRecord
 
 ## Installation
 
