@@ -11,7 +11,7 @@ This is my first Rails app. It is a simple orders stock management system develo
 - Supported ORMs: ActiveRecord
 
 ## Installation
-
+1. Clone Repo
 2. Run `bundle install`
 3. Run `rails g rails_magazzino:install`
 4. Provide a namespace for the routes when asked
