@@ -1,6 +1,6 @@
 # rails_magazzino
 
-This is my first Rails app. It is a simple orders stock management system developed in Rails 7 with Webpacker.
+This is my first Rails app. It is a very basic web application for efficient management of orders, customers, and inventory developed in Rails 7 with Webpacker.
 
 ### Built With
 <p align="left">
