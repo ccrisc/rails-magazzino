@@ -65,3 +65,10 @@ If you think you found a bug in rails_magazzino, you can [submit an issue](https
 
 ## Supported Ruby Versions
 - Ruby 3.1.2
+
+## Contributing
+See `CONTRIBUTING.md` for more information.
+
+## License
+Distributed under the GNU GENERAL PUBLIC LICENSE. See `LICENSE.txt` for more information.
+
