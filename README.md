@@ -13,9 +13,7 @@ This is my first Rails app. It is a simple orders stock management system develo
 ## Installation
 1. Clone Repo
 2. Run `bundle install`
-3. Run `rails g rails_magazzino:install`
-4. Provide a namespace for the routes when asked
-5. Start a server `rails s` and administer your data at [localhost](http://localhost:3000/).
+3. Start a server `rails s` and administer your data at [localhost](http://localhost:3000/).
 
 ## Upgrading from 2.x
 
