@@ -2,6 +2,10 @@
 
 This is my first Rails app. It is a simple orders stock management system developed in Rails 7 with Importmap.
 <img width="1792" alt="Screenshot 2024-07-26 alle 11 09 10" src="https://github.com/user-attachments/assets/1d982f12-06b6-422f-b9d9-a142f29f17d2">
+<img width="1792" alt="Screenshot 2024-07-26 alle 11 09 25" src="https://github.com/user-attachments/assets/6e6a01b6-27f2-4268-9269-759afcdd7c3c">
+<img width="1792" alt="Screenshot 2024-07-26 alle 11 11 14" src="https://github.com/user-attachments/assets/7eb10df1-efe1-4f60-8e4d-6b3ce1bd0110">
+<img width="1792" alt="Screenshot 2024-07-26 alle 11 11 20" src="https://github.com/user-attachments/assets/f82c253e-11e6-45c9-924f-e2ff5ad1f63c">
+<img width="1792" alt="Screenshot 2024-07-26 alle 11 11 40" src="https://github.com/user-attachments/assets/e0efd5a7-47d8-472b-b2af-a9298cd7da27">
 
 ## Features
 
