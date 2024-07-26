@@ -1,6 +1,7 @@
 # rails_magazzino
 
 This is my first Rails app. It is a simple orders stock management system developed in Rails 7 with Importmap.
+<img width="1792" alt="Screenshot 2024-07-26 alle 11 09 10" src="https://github.com/user-attachments/assets/1d982f12-06b6-422f-b9d9-a142f29f17d2">
 
 ## Features
 
