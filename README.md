@@ -44,7 +44,6 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ## Upgrading from 7.x
 Due to introduction of Webpack/Webpacker support, some additional dependency and configuration will be needed.
-Running `brew install yarn` may suggest you some required changes, based on current setup of your app.
 
 ## Configuration
 Set up DB in `config/database.yml`:
