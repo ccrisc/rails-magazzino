@@ -61,7 +61,7 @@ Set up DB in `config/database.yml`:
 
 ## Support
 
-If you think you found a bug in rails_magazzino, you can [submit an issue](https://github.com/ccrisc/rails_magazzino/issues/new).
+If you think you found a bug in rails_magazzino, you can [submit an issue](https://github.com/ccrisc/rails-magazzino/issues/new/choose).
 
 ## Supported Ruby Versions
 - Ruby 3.1.2
