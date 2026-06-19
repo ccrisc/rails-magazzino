@@ -49,8 +49,8 @@ Home page provides a brief summary of total customers, total items and total ord
    git clone https://github.com/ccrisc/rails-magazzino.git
    ```
 2. Run `bundle install`
-3. Run `rake:db:create`
-4. Perform migration `rake:db:migrate`
+3. Run `rake db:create`
+4. Perform migration `rake db:migrate`
 5. Start a server `rails s` and administer your data at [localhost](http://localhost:3000/).
 
 ## Upgrading from 7.x
