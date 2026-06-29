@@ -21,7 +21,7 @@
     <div>
       <%= form.label :Stock %>
       <br>
-      <%= form.number_field :stock%>
+      <%= form.number_field :stock, disabled: @item.persisted?%>
       <%= @item.errors[:stock].first if @item.errors[:stock].any? %>
     </div>
     <br>

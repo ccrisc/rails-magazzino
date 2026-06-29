@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="d-flex">
+    <h2>Modifica Fornitore</h2>
+  </div>
+
+  <%= form_with model: @supplier, id: dom_id(@supplier, "form"), class: "table min-w-full", method: :patch do |form| %>
+
+    <div>
+      <%= form.label :name, "Nome" %>
+      <br>
+      <%= form.text_field :name %>
+      <%= @supplier.errors[:name].first if @supplier.errors[:name].any? %>
+    </div>
+
+    <div>
+      <%= form.label :email, "Email" %>
+      <br>
+      <%= form.email_field :email %>
+      <%= @supplier.errors[:email].first if @supplier.errors[:email].any? %>
+    </div>
+
+    <div>
+      <%= form.label :phone, "Telefono" %>
+      <br>
+      <%= form.text_field :phone %>
+      <%= @supplier.errors[:phone].first if @supplier.errors[:phone].any? %>
+    </div>
+
+    <div>
+      <%= form.label :vat_number, "Partita IVA" %>
+      <br>
+      <%= form.text_field :vat_number %>
+      <%= @supplier.errors[:vat_number].first if @supplier.errors[:vat_number].any? %>
+    </div>
+
+    <div>
+      <%= form.label :tax_code, "Codice Fiscale" %>
+      <br>
+      <%= form.text_field :tax_code %>
+      <%= @supplier.errors[:tax_code].first if @supplier.errors[:tax_code].any? %>
+    </div>
+
+    <div>
+      <%= form.label :address, "Indirizzo" %>
+      <br>
+      <%= form.text_field :address %>
+      <%= @supplier.errors[:address].first if @supplier.errors[:address].any? %>
+    </div>
+
+    <div>
+      <%= form.label :city, "Città" %>
+      <br>
+      <%= form.text_field :city %>
+      <%= @supplier.errors[:city].first if @supplier.errors[:city].any? %>
+    </div>
+
+    <div>
+      <%= form.label :zip_code, "CAP" %>
+      <br>
+      <%= form.text_field :zip_code %>
+      <%= @supplier.errors[:zip_code].first if @supplier.errors[:zip_code].any? %>
+    </div>
+
+    <div>
+      <%= form.label :country, "Paese" %>
+      <br>
+      <%= form.text_field :country %>
+      <%= @supplier.errors[:country].first if @supplier.errors[:country].any? %>
+    </div>
+
+    <div>
+      <%= form.label :notes, "Note" %>
+      <br>
+      <%= form.text_area :notes, rows: 4 %>
+      <%= @supplier.errors[:notes].first if @supplier.errors[:notes].any? %>
+    </div>
+
+    <div>
+      <%= form.label :active, "Attivo" %>
+      <%= form.check_box :active %>
+    </div>
+
+    <br>
+
+    <div class="inline">
+      <%= link_to 'Annulla', suppliers_path, class: "btn btn-light" %>
+      <%= form.submit 'Conferma', class: 'btn btn-primary' %>
+    </div>
+
+  <% end %>
+</div>

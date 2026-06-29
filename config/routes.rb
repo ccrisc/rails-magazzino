@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     get 'new_stock', on: :collection
     get 'orders_by_item', on: :member
   end
+  resources :suppliers
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Uncomment and modify the root route

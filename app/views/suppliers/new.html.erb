@@ -1,35 +1,35 @@
 <!-- app/views/orders/new.html.erb -->
 <div class="container">
   <div class="d-flex">
-    <h2>Crea nuovo fornitore</h2>
+    <h2>Crea nuova Anagrafica</h2>
   </div>
 
-<%= form_with(model: @user, local: true) do |form| %>
+<%= form_with(model: @supplier, local: true) do |form| %>
   <!-- User form fields -->
     <div>
   <%= form.label :name %>
       <br>
   <%= form.text_field :name %>
-      <%= @user.errors[:name].first if @user.errors[:name].any? %>
+      <%= @supplier.errors[:name].first if @supplier.errors[:name].any? %>
     </div>
 
       <div>
   <%= form.label :Cognome %>
         <br>
   <%= form.text_field :surname %>
-        <%= @user.errors[:surname].first if @user.errors[:surname].any? %>
+        <%= @supplier.errors[:surname].first if @supplier.errors[:surname].any? %>
         </div>
 
           <div>
   <%= form.label :Email %>
             <br>
   <%= form.text_field :email %>
-            <%= @user.errors[:email].first if @user.errors[:email].any? %>
+            <%= @supplier.errors[:email].first if @supplier.errors[:email].any? %>
           </div>
 
     <br>
     <div class="inline">
-      <td><%= link_to 'Annulla', users_path, class: "btn btn-light" %></td>
+      <td><%= link_to 'Annulla', suppliers_path, class: "btn btn-light" %></td>
       <td><%= form.submit 'Conferma', class: 'btn btn-primary'%></td>
   </div>
 <% end %>

@@ -73,7 +73,6 @@ gem 'faker'
 gem 'webpacker'
 gem 'bootstrap'
 #gem 'webpacker-react' # If you are using React
-gem 'jquery-rails'
 gem 'popper_js'
 gem 'jquery-datatables-rails'
 gem 'will_paginate', '~> 3.3'
