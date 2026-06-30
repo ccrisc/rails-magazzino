@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="mx-auto md:w-2/3 w-full flex">
+    <div class="mx-auto">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <% end %>
+
+      <div class="bg-white p-5 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4"><%= @category.name %></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= link_to 'Indietro', categories_path, class: "btn btn-light" %>
+    <%= link_to 'Modifica', edit_category_path(@category), class: "btn btn-dark" %>
+  </div>
+  <br>
+  <%= button_to 'Elimina', category_path(@category), method: :delete, class: "btn btn-danger" %>
+
+
+
+
+</div>

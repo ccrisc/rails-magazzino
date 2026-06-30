@@ -1,0 +1,22 @@
+<!-- app/views/orders/new.html.erb -->
+<div class="container">
+  <div class="d-flex">
+    <h2>Crea nuova Categoria</h2>
+  </div>
+
+  <%= form_with(model: @category, local: true) do |form| %>
+    <!-- User form fields -->
+    <div>
+      <%= form.label :name %>
+      <br>
+      <%= form.text_field :name %>
+      <%= @category.errors[:name].first if @category.errors[:name].any? %>
+    </div>
+
+    <br>
+    <div class="inline">
+      <td><%= link_to 'Annulla', categories_path, class: "btn btn-light" %></td>
+      <td><%= form.submit 'Conferma', class: 'btn btn-primary'%></td>
+    </div>
+  <% end %>
+</div>
