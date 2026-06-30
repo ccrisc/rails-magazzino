@@ -2,15 +2,11 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
-    @orders = Order.all
-    # Search Logic
+    @orders = current_manager.company.orders
     if params[:search].present?
-      search_param = params[:search]
       @orders = @orders.where("CAST(id AS TEXT) ILIKE ?", "%#{search_param}%")
     end
-    # Pagination
     @orders = @orders.paginate(page: params[:page], per_page: 10)
-    # Sorting
     if params[:sort].present?
       @orders = @orders.order(params[:sort])
     end
@@ -24,7 +20,7 @@ class OrdersController < ApplicationController
 
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(order_params.merge(company: current_manager.company))
 
     if @order.save
       redirect_to orders_path, notice: 'Ordine creato con successo!'
@@ -58,7 +54,7 @@ class OrdersController < ApplicationController
 
   private
   def set_order
-    @order = Order.find(params[:id])
+    @order = current_manager.company.orders.find(params[:id])
   end
 
   # app/controllers/orders_controller.rb

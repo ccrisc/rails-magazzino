@@ -24,6 +24,12 @@
       <%= form.number_field :stock %>
     </div>
 
+    <div>
+      <%= form.label :category_id, "Categoria" %>
+      <br>
+      <%= form.collection_select :category_id, current_manager.company.categories, :id, :name, prompt: 'Seleziona categoria', class: 'form-control' %>
+    </div>
+
     <br>
     <div class="inline">
       <td><%= link_to 'Annulla', items_path, class: "btn btn-light" %></td>

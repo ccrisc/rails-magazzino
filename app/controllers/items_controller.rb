@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = current_manager.company.items
     # Search Logic
     if params[:search].present?
       @items = @items.where("name LIKE ?", "%#{params[:search]}%")
@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = Item.new(item_params.merge(company: current_manager.company))
     if @item.save
       redirect_to items_url, notice: 'Articolo creato correttamente!.'
     else
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to items_url, notice: 'Anagrafica cliente aggiornata.'
+      redirect_to items_url, notice: 'Articolo aggiornato.'
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to items_url, notice: 'Cliente eliminato!.'
+    redirect_to items_url, notice: 'Articolo eliminato!.'
   end
 
   def orders_by_item
@@ -57,11 +57,13 @@ class ItemsController < ApplicationController
   private
 
   def set_item
-    @item = Item.find(params[:id])
+    def set_item
+      @item = current_manager.company.items.find(params[:id])
+    end
   end
 
   def item_params
-    params.require(:item).permit(:name, :description, :stock)
+    params.require(:item).permit(:name, :description, :stock, :category_id)
   end
 end
 

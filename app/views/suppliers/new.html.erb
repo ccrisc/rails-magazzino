@@ -13,19 +13,77 @@
       <%= @supplier.errors[:name].first if @supplier.errors[:name].any? %>
     </div>
 
-      <div>
-  <%= form.label :Cognome %>
-        <br>
-  <%= form.text_field :surname %>
-        <%= @supplier.errors[:surname].first if @supplier.errors[:surname].any? %>
-        </div>
 
-          <div>
-  <%= form.label :Email %>
-            <br>
-  <%= form.text_field :email %>
-            <%= @supplier.errors[:email].first if @supplier.errors[:email].any? %>
-          </div>
+    <div>
+      <%= form.label :Email %>
+      <br>
+      <%= form.text_field :email %>
+      <%= @supplier.errors[:email].first if @supplier.errors[:email].any? %>
+    </div>
+
+
+    <div>
+      <%= form.label :phone %>
+      <br>
+      <%= form.text_field :phone %>
+      <%= @supplier.errors[:phone].first if @supplier.errors[:phone].any? %>
+    </div>
+
+    <div>
+      <%= form.label :vat_number %>
+      <br>
+      <%= form.text_field :vat_number %>
+      <%= @supplier.errors[:vat_number].first if @supplier.errors[:vat_number].any? %>
+    </div>
+
+    <div>
+      <%= form.label :tax_code %>
+      <br>
+      <%= form.text_field :tax_code %>
+      <%= @supplier.errors[:tax_code].first if @supplier.errors[:tax_code].any? %>
+    </div>
+
+    <div>
+      <%= form.label :address %>
+      <br>
+      <%= form.text_field :address %>
+      <%= @supplier.errors[:address].first if @supplier.errors[:address].any? %>
+    </div>
+
+    <div>
+      <%= form.label :city %>
+      <br>
+      <%= form.text_field :city %>
+      <%= @supplier.errors[:city].first if @supplier.errors[:city].any? %>
+    </div>
+
+    <div>
+      <%= form.label :zip_code %>
+      <br>
+      <%= form.text_field :zip_code %>
+      <%= @supplier.errors[:zip_code].first if @supplier.errors[:zip_code].any? %>
+    </div>
+
+    <div>
+      <%= form.label :country %>
+      <br>
+      <%= form.text_field :country %>
+      <%= @supplier.errors[:country].first if @supplier.errors[:country].any? %>
+    </div>
+
+    <div>
+      <%= form.label :notes %>
+      <br>
+      <%= form.text_area :notes %>
+      <%= @supplier.errors[:notes].first if @supplier.errors[:notes].any? %>
+    </div>
+
+    <div>
+      <%= form.label :active %>
+      <br>
+      <%= form.check_box :active %>
+    </div>
+
 
     <br>
     <div class="inline">

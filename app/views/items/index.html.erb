@@ -29,6 +29,7 @@
         <tr>
           <th><%= link_to "Articolo", :sort => "name"%> </th>
           <th><%= link_to "Descrizione", :sort => "description"%> </th>
+          <th><%= link_to "Categoria", :sort => "id_category"%> </th>
           <th>Stock</th>
           <th colspan="2"></th>
         </tr>
@@ -39,6 +40,7 @@
           <tr>
             <td><%= item.name %></td>
             <td><%= item.description %></td>
+            <td><%= item.category&.name %></td>
             <td><%= link_to item.stock, orders_by_item_item_path(item) %></td>
             <td><%= link_to 'Modifica', edit_item_path(item), class: "btn btn-dark" %></td>
             <td><%= button_to 'Elimina', item_path(item), method: :delete, class: "btn btn-danger" %></td>

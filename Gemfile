@@ -82,3 +82,5 @@ gem 'ransack'
 
 
 
+
+gem "devise", "~> 5.0"

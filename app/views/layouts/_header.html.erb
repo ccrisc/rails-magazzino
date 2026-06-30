@@ -21,7 +21,17 @@
         <%= link_to "Vendite", orders_path, class: "btn btn-block btn-primary mybtn", role: "button" %>
       </div>
 
+      <div class="col-md-3 col-6">
+        <%= link_to "Fornitori", suppliers_path, class: "btn btn-block btn-primary mybtn", role: "button" %>
+      </div>
 
+      <div class="col-md-3 col-6">
+        <%= link_to "Categorie", categories_path, class: "btn btn-block btn-primary mybtn", role: "button" %>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <%= button_to "Logout", destroy_manager_session_path, method: :delete, class: "btn btn-block btn-danger mybtn" %>
+      </div>
 
     </div>
   </div>

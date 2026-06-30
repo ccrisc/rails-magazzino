@@ -1,6 +1,9 @@
 <div class="nested-fields">
-  <%= f.collection_select :item_id, Item.all, :id, :name, prompt: 'Seleziona articolo', class: 'form-control' %>
-  <%= f.text_field :quantity %>
+  <%= f.select :item_id,
+               options_for_select(current_manager.company.items.map { |item| [item.name, item.id, { data: { stock: item.stock } }] }),
+               { prompt: 'Seleziona articolo' },
+               { class: 'form-control item-select' } %>
+  <%= f.text_field :quantity, class: 'quantity-field' %>
   <%= link_to_remove_association "Cancella", f, class:"btn btn-danger" %>
 </div>
 <br>

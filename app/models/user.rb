@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :surname, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
-
+  belongs_to :company
   has_many :orders, dependent: :destroy
   has_many :order_items, dependent: :destroy, through: :orders
 

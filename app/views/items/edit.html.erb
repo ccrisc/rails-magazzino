@@ -21,9 +21,16 @@
     <div>
       <%= form.label :Stock %>
       <br>
-      <%= form.number_field :stock, disabled: @item.persisted?%>
       <%= @item.errors[:stock].first if @item.errors[:stock].any? %>
     </div>
+
+    <div>
+      <%= form.label :category_id, "Categoria" %>
+      <br>
+      <%= form.collection_select :category_id, current_manager.company.categories, :id, :name, prompt: 'Seleziona categoria', class: 'form-control' %>
+      <%= @item.errors[:category_id].first if @item.errors[:category_id].any? %>
+    </div>
+
     <br>
 
     <div class="inline">

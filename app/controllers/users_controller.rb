@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.all
+    @users = current_manager.company.users
     # Search Logic
     if params[:search].present?
       @users = @users.where("name LIKE ?", "%#{params[:search]}%")
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params.merge(company: current_manager.company))
     if @user.save
       redirect_to @user, notice: 'Cliente creato correttamente!.'
       #redirect_to users_url, notice: 'User was successfully created.'
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = current_manager.company.users.find(params[:id])
   end
 
   def user_params

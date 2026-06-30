@@ -28,7 +28,6 @@
     <th><%= link_to "Nome", :sort => "name"%> </th>
     <th><%= link_to "Descrizione completa (Nome, P.IVA, Indirizzo)", :sort => "full_name"%> </th>
     <th><%= link_to "Email", :sort => "email"%> </th>
-    <th>Ordini</th>
     <th colspan="2"></th>
   </tr>
         </thead>
@@ -39,7 +38,6 @@
       <td><%= supplier.name %></td>
       <td><%= supplier.full_name %></td>
       <td><%= supplier.email %></td>
-      <td><%= link_to supplier.orders.count, show_orders_supplier_path(supplier) %></td>
       <td><%= link_to 'Modifica', edit_supplier_path(supplier), class: "btn btn-dark" %></td>
       <td><%= button_to 'Elimina', supplier_path(supplier), method: :delete, class: "btn btn-danger" %></td>
       <!-- <td><%= link_to 'Elimina', supplier, method: :delete, data: { confirm: 'Sei sicuro?'} %></td> -->
